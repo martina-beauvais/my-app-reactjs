@@ -1,0 +1,42 @@
+.header {
+    width: 100%;
+    height: 30px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: #464246;
+    position: fixed;
+    z-index: 1; 
+    font-family: 'BIZ UDPMincho', serif;
+}
+.logo{
+    margin-top: -5px;
+    width: 60px;
+    height: 60px;
+}
+.name{
+    margin-top: -5px;
+    width:150px; 
+    height:50px;
+}
+.shadow{
+    width: 100%;
+    height: 85px;
+}
+#offcanvasNavbar{
+    font-family: 'BIZ UDPMincho', serif;
+    font-size: larger;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+ul{
+    list-style-type: none;
+    text-decoration: none;
+}
+.navbar-nav{
+    justify-content: left;
+    overflow: hidden;
+}
+body{
+    background-color: whitesmoke;
+}
