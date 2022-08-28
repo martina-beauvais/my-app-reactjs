@@ -1,6 +1,6 @@
 import fotoLogo from '../assets/logo-dark (1).png';
 import fotoName from '../assets/delicate.png';
-import CartWidget from './CartWidget';
+import CartWidget from './CartWidget.js';
 
 const NavBar = () => {
     return (
