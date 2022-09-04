@@ -60,3 +60,8 @@ body{
     font-family: 'BIZ UDPMincho', serif;
 
 }
+.contador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
