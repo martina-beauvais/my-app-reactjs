@@ -9,7 +9,7 @@ function App() {
     <div>
       <NavBar/>
       <ItemListContainer 
-      greeting={'Bievenido a Delicate'} 
+      greeting={'Bievenido a Cornelia Street'} 
       description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae vestibulum purus. Cras luctus lacus.'}/>
     </div>
   );

@@ -1,13 +1,11 @@
-import fotoLogo from '../assets/logo-dark (1).png';
-import fotoName from '../assets/delicate.png';
+import fotoLogo from '../assets/extras/logo.png';
+import fotoName from '../assets/extras/cornelia-street.png';
 import CartWidget from './CartWidget.js';
-import ItemCount from './ItemCount';
 
 const NavBar = () => {
     return (
         <div className="shadow p-3 mb-5 bg-body rounded">
             <div className="encabezado">
-                    <img src={fotoLogo} alt="" className="logo" />
                     <img src={fotoName} alt="" className="name"/>            
             </div>
             <nav className="navbar navbar-expand-lg navbar-light fixed-top ">
@@ -20,7 +18,7 @@ const NavBar = () => {
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                                 <a className="nav__enlace" href="#">
-                                    <img src="./imagenes/img-extras/logo-dark (1).png" width="50" height="150" alt="name" className="logo" />
+                                    <img src={fotoLogo} width="50" height="150" alt="name" className="logo" />
                                 </a> 
                             </h5>
                             <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>

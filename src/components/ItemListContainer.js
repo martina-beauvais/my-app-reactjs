@@ -1,10 +1,21 @@
 import React from 'react'
-import ItemCount from './ItemCount'
+import ItemList from './ItemList'
+import { useState , useEffect} from 'react';
+import { getProductos } from '../productos/productos'
+
 
 const ItemListContainer = ({greeting,description}) => {
+    const [ productos, setProductos ] = useState([]);
+
+    useEffect(() => {
+        getProductos().then((data) => {
+            setProductos(data)
+        })
+    },[])
+
     return (
         <>
-    <div className="row">
+    <div id='bienvenida'>
         <div className="col-sm-7">
             <div className="card-banner">
                 <div className="card-body">
@@ -14,7 +25,7 @@ const ItemListContainer = ({greeting,description}) => {
             </div>
         </div>
     </div>
-    <ItemCount stock='10' onAdd={ (valor) => alert(`Se han añadido ${valor} productos`)}/>
+    <ItemList productos={productos}/>
     </>
 
     )

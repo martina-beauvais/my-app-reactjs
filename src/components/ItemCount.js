@@ -16,7 +16,7 @@ const ItemCount = ({stock, valorInicial = 0,onAdd}) => {
                 valor < stock ? setValor(valor + 1) : setValor(stock)}}>
                 +
             </button>
-            <button onClick={() => onAdd(valor)}>
+            <button clasName='botonAñadir' onClick={() => onAdd(valor)}>
                 Añadir al carrito
             </button>
         </div>

@@ -2,9 +2,9 @@
     font-family: 'BIZ UDPMincho', serif;
 
 }
-.header {
+.shadow {
     width: 100%;
-    height: 30px;
+    height: 85px;
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,20 +12,12 @@
     position: fixed;
     z-index: 1; 
 }
-.logo{
-    margin-top: -5px;
-    width: 60px;
-    height: 60px;
-}
 .name{
-    margin-top: -5px;
-    width:150px; 
-    height:50px;
+    margin-top: -31px;
+    width:240px; 
+    height:100px;
 }
-.shadow{
-    width: 100%;
-    height: 85px;
-}
+
 #offcanvasNavbar{
     font-family: 'BIZ UDPMincho', serif;
     font-size: larger;
@@ -54,14 +46,28 @@ ul{
 body{
     background-color: whitesmoke;
 }
+
 .greeting{
     text-align: center;
     text-decoration: underline;
     font-family: 'BIZ UDPMincho', serif;
 
 }
+#bienvenida{
+    padding-top: 10%;
+    margin-left:10%;
+}
 .contador{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 10px;
+}
+.card{
+    margin-top:8%;
+    margin-left:8%;
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 5%;
+    text-align: center;
 }
