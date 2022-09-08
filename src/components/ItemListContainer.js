@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemList from './ItemList'
 import { useState , useEffect} from 'react';
-import { getProductos } from '../productos/productos'
+import { getProductos } from '../productos/productos.js'
 
 
 const ItemListContainer = ({greeting,description}) => {
