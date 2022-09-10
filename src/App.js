@@ -4,8 +4,7 @@ import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.js';
 import './app/style.css';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import { getItem } from './productos/productos';
-
+import {getItem} from './productos'
 
 function App() {
   const [item, setItem] = useState({});
