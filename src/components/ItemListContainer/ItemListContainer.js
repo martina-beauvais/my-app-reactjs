@@ -1,20 +1,31 @@
 import React from 'react'
 import ItemList from './ItemList'
 import { useState , useEffect} from 'react';
-import { getProductos } from '../../productos';
+import products from '../../products';
+import { useParams } from 'react-router-dom';
 
-const ItemListContainer = ({greeting,description}) => {
+
+const ItemListContainer = () => {
     const [ productos, setProductos ] = useState([]);
 
+    const {categoryId} = useParams()
+
     useEffect(() => {
-        getProductos().then((data) => {
-            setProductos(data)
+        const getProductos = () => new Promise ((res) => {
+            setTimeout(() => { 
+                res(products)
+            },1000)
         })
-    },[])
+        if(categoryId){
+            getProductos().then(res => setProductos(res.filter((res) => res.category === categoryId)))
+        }else{
+            getProductos().then(res => setProductos(res))
+        }  
+    },[categoryId])
 
     return (
         <>
-    <div id='bienvenida'>
+    {/*<div id='bienvenida'>
         <div className="col-sm-7">
             <div className="card-banner">
                 <div className="card-body">
@@ -23,10 +34,9 @@ const ItemListContainer = ({greeting,description}) => {
                 </div>
             </div>
         </div>
-    </div>
+    </div>*/}
     <ItemList productos={productos}/>
     </>
     )
 }
-
 export default ItemListContainer

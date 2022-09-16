@@ -1,4 +1,6 @@
-import imagen1 from './assets/imagenes/vela-soja.png'
+{/* API DE PRODUCTOS DESHABILITADA --- se mantiene en la carpeta para extraer más adelante los datos de los productos que faltan*/}
+
+{/*import imagen1 from './assets/imagenes/vela-soja.png'
 import imagen2 from './assets/imagenes/vela-lavanda.png'
 import imagen3 from './assets/imagenes/vela-limited-edition-madera-y-ambar.png'
 import imagen4 from './assets/imagenes/vela-frutos-rojos.png'
@@ -16,6 +18,8 @@ import imagen15 from './assets/imagenes/serum-acido-hialurónico.png'
 import imagen16 from './assets/imagenes/serum-anti-manchas.png'
 import imagen17 from './assets/imagenes/serum-reafirmante.png'
 import imagen18 from './assets/imagenes/serum-exfoliante.png'
+
+
 
 class Producto {
     constructor(id, title, description, category, price, stock, imagen) {
@@ -57,10 +61,10 @@ const task = new Promise ((resolve) => {
 return task;
 }
 
-export const getItem = () => new Promise ((resolve,reject) => {
+export const getItem = () => new Promise ((resolve) => {
     setTimeout(() => resolve(
         { id: 1, title: "Vela de soja", description: "Vela aromatica de soja hecha con aceites escenciales y naturales.", category: "candle", price: 764, stock: 10,  imagen: imagen1},
         { id: 2, title: "Vela de lavanda", description: "Vela aromatica de soja hecha con aceites escenciales y naturales.", category: "candle",price: 356,stock: 1500,imagen: imagen2},
         { id: 3, title: "Vela de madera y ámbar ", description: "Vela aromatica de soja hecha con aceites escenciales y naturales.", category: "candle",price: 988, stock: 170, imagen: imagen3},
-    ),3000)
-})
+    ),2000)
+})*/}

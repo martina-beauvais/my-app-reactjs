@@ -27,7 +27,9 @@
 ul{
     list-style-type: none;
     text-decoration: none;
+    text-decoration-color: #081832;
 }
+
 .navbar-nav{
     justify-content: left;
     overflow: hidden;
@@ -45,6 +47,17 @@ ul{
 }
 body{
     background-color: whitesmoke;
+}
+
+h1{
+    padding-top:5%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: #EEE3CB;
 }
 
 .greeting{
@@ -85,4 +98,7 @@ body{
 .btn-circle-two{
     border: solid 1px #081832;
     background-color: #B7C4CF;
+}
+.detallesProducto{
+    margin-left: 35%;
 }
