@@ -1,7 +1,7 @@
 import fotoLogo from '../assets/extras/logo.png';
 import fotoName from '../assets/extras/cornelia-street.png';
 import CartWidget from './CartWidget.js';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
     return (
@@ -19,9 +19,9 @@ const NavBar = () => {
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
                                 <a className="nav__enlace">
-                                    <Link to="/">
+                                    <NavLink to="/">
                                         <img src={fotoLogo} width="50" height="150" alt="name" className="logo" />
-                                    </Link>
+                                    </NavLink>
                                 </a> 
                             </h5>
                             <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -31,37 +31,37 @@ const NavBar = () => {
                             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li className="nav-item">
                                     <a className="nav-link active" aria-current="page">
-                                        <Link to="/">
+                                        <NavLink to="/">
                                             Inicio
-                                        </Link>
+                                        </NavLink>
                                     </a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link " aria-current="page">
-                                        <Link to="/category/candle">
+                                        <NavLink to="/category/candle">
                                             Candles
-                                        </Link>
+                                        </NavLink>
                                     </a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link " aria-current="page" >
-                                        <Link to="/category/serum">
+                                        <NavLink to="/category/serum">
                                             Sérums
-                                        </Link>
+                                        </NavLink>
                                     </a>
                                 </li>
                             </ul>
                             <div>
                                 <div className="submit">
                                     <a className="btn btn-outline-dark" >
-                                        <Link to="*">
+                                        <NavLink to="*">
                                             Registrarse
-                                        </Link>
+                                        </NavLink>
                                     </a> 
                                     <a className="btn btn-outline-dark" >
-                                        <Link to="*">
+                                        <NavLink to="*">
                                             Iniciar Sesión
-                                        </Link>
+                                        </NavLink>
                                     </a>
                                 </div> 
                             </div>
@@ -69,10 +69,10 @@ const NavBar = () => {
                     </div>
                     <ul>
                         <li className="nav-item">
-                            <a className="nav-link " aria-current="page" >
-                                <Link to="/cart/">
+                            <a className="nav-link ">
+                                <NavLink to="/cart/">
                                     <CartWidget/>
-                                </Link>
+                                </NavLink>
                             </a>
                         </li>
                     </ul>
