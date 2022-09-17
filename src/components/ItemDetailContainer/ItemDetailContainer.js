@@ -10,7 +10,6 @@ const ItemDetailContainer = () => {
         const getItemDetail = () => new Promise ((res,rej) => { 
             setTimeout(() => 
                 res(product),
-            /*res(products.find(product => product.id === Number(itemId))),1500)*/
             900)
         })
         getItemDetail().then(res => setItem(res.find((product) => Number(product.id )=== Number(itemId))))
