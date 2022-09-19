@@ -7,17 +7,16 @@ const ItemDetailContainer = () => {
     const {itemId} = useParams()
     const [ item, setItem ] = useState({})
     useEffect(() => {
-        const getItemDetail = () => new Promise ((res,rej) => { 
-            setTimeout(() => 
-                res(product),
-            900)
-        })
-        getItemDetail().then(res => setItem(res.find((product) => Number(product.id )=== Number(itemId))))
+        getItemDetail().then(res => setItem(res.find((product) => Number(product.id) === Number(itemId))))
     },[])
-
+    const getItemDetail = () => new Promise ((res,rej) => { 
+        setTimeout(() => 
+            res(product),
+        900)
+    })
     return (
         <div className='contenedorItemDetail'>
-            <ItemDetail products={product}/>
+            <ItemDetail products={item}/>
         </div>
     )
 }

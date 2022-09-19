@@ -14,6 +14,7 @@ const Router = () => {
                     <Route path="/category/:categoryId" element={<ItemListContainer />} />
                     <Route path="/item/:itemId" element={<ItemDetailContainer />} />
                     <Route path="/cart/" element={<CartWidget/>} />
+                    <Route path="*" element={<div>Error 404</div> }/> 
                 </Route>
             </Routes>
         </BrowserRouter>
