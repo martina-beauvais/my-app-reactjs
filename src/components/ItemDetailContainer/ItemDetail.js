@@ -34,16 +34,11 @@ const ItemDetail = ( {products } ) => {
                         <ItemCount stock={products.stock} onAdd={()=>{setValor()}} />
                         : 
                         <div>
+                            <hr/>
                             <Link to='/cart/'>
                                     <button className='btn btn-circle-two'>
                                         Terminar compra
                                     </button>
-                            </Link>
-                            <hr/>
-                            <Link to='/cart'>
-                                <button className='btn btn-circle-two'>
-                                    Ver producto en carrito
-                                </button>
                             </Link>
                         </div>
                     }
