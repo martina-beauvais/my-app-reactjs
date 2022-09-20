@@ -30,7 +30,7 @@ const ItemDetail = ( {products } ) => {
                     <p className="card-text"> $ {products.price} </p>
                     <p> {products.description} </p>
                     {
-                        valor === 0 ? 
+                        valor == 0 ? 
                         <ItemCount stock={products.stock} onAdd={()=>{setValor()}} />
                         : 
                         <div>
