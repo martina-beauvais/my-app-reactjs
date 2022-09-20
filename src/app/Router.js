@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
-import CartWidget from "../components/CartWidget";
+import CartWidget from "../components/Cart/CartWidget";
 
 const Router = () => {
     return(

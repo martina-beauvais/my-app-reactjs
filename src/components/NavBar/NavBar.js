@@ -1,7 +1,8 @@
-import fotoLogo from '../assets/extras/logo.png';
-import fotoName from '../assets/extras/cornelia-street.png';
-import CartWidget from './CartWidget.js';
+import fotoLogo from '../../assets/extras/logo.png';
+import fotoName from '../../assets/extras/cornelia-street.png';
+import CartWidget from '../Cart/CartWidget';
 import { NavLink } from 'react-router-dom';
+import './navbar.css'
 
 const NavBar = () => {
     return (

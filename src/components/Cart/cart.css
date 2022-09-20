@@ -1,0 +1,11 @@
+.cart{
+    margin-right: 40px;
+    padding-top:8px;
+    background-color: rgba(233,158,117, 0.7);
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    justify-content: space-between;
+
+}
