@@ -1,11 +1,39 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ItemCount from './itemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import './itemDetail.css'
+import { CartContext } from '../context/CartContext';
+import Swal from 'sweetalert2';
 
 const ItemDetail = ( {products } ) => {
-    const [valor, setValor] = useState(0)
+    const {addToCart} = useContext(CartContext)
+    function onAdd(valor){
+        if(valor < 1){
+            Swal.fire('Debes añadir al menos 1', {
+                position: "top-right",
+                autoClose: 1700,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: false,
+                progress: false,
+                });
+        }else{
+            addToCart(products, valor)
+            Swal.fire(`${valor} Producto(s) añadido(s)`, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: false,
+                progress: false,
+                });
+        }
+    }
+
+    const [valor] = useState(0)
 
     return (
         <div className='detallesProducto'>
@@ -18,7 +46,7 @@ const ItemDetail = ( {products } ) => {
                     <p> {products.description} </p>
                     {
                         valor == 0 ? 
-                        <ItemCount stock={products.stock} onAdd={()=>{setValor()}} />
+                        <ItemCount stock={products.stock} onAdd={onAdd}/>
                         : 
                         <div>
                             <Link to='/cart/'>
