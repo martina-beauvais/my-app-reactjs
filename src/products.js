@@ -1,8 +1,6 @@
-{/* NUEVA API DE PRODUCTOS PARA LA PRIMERA ENTREGA */}
 import img1 from './assets/imagenes/vela-soja.png'
 import img2 from './assets/imagenes/vela-lavanda.png'
 import img3 from './assets/imagenes/vela-limited-edition-madera-y-ambar.png'
-{/* hay productos en el medio que decidí sacar por el momento para no insertar tanto código */}
 import img16 from './assets/imagenes/serum-anti-manchas.png'
 import img17 from './assets/imagenes/serum-reafirmante.png'
 import img18 from './assets/imagenes/serum-exfoliante.png'
@@ -16,4 +14,6 @@ const products = [
     { id: 18, title: "Serum facial exfoliante", description: "Serum...", category: "serum", price: 1500, stock: 4547, img: img18}
 ]
 
+{/* NUEVA API DE PRODUCTOS PARA LA PRIMERA ENTREGA */}
+{/* hay productos en el medio que decidí sacar por el momento para no insertar tanto código */}
 export default products

@@ -7,6 +7,7 @@ import { CartContext } from '../context/CartContext';
 import Swal from 'sweetalert2';
 
 const ItemDetail = ( {products } ) => {
+    const [valor, setValor] = useState(true)
     const {addToCart} = useContext(CartContext)
     function onAdd(valor){
         if(valor < 1){
@@ -30,10 +31,10 @@ const ItemDetail = ( {products } ) => {
                 draggable: false,
                 progress: false,
                 });
+                setValor(false)
         }
     }
 
-    const [valor] = useState(0)
 
     return (
         <div className='detallesProducto'>
@@ -45,7 +46,7 @@ const ItemDetail = ( {products } ) => {
                     <p className="card-text"> $ {products.price} </p>
                     <p> {products.description} </p>
                     {
-                        valor == 0 ? 
+                        valor ? 
                         <ItemCount stock={products.stock} onAdd={onAdd}/>
                         : 
                         <div>
