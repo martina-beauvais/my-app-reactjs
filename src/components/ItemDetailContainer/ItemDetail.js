@@ -7,33 +7,49 @@ import { CartContext } from '../context/CartContext';
 import Swal from 'sweetalert2';
 
 const ItemDetail = ( {products } ) => {
+    const [valor, setValor] = useState(true)
     const {addToCart} = useContext(CartContext)
     function onAdd(valor){
         if(valor < 1){
-            Swal.fire('Debes añadir al menos 1', {
-                position: "top-right",
-                autoClose: 1700,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: false,
-                progress: false,
-                });
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                background: '#E99E75',
+                color: 'black',  
+                showConfirmButton: false,
+                timer: 1500,
+                timerProgressBar: false,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer),
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            Toast.fire({
+                icon: 'error',
+                title: 'Debes añadir por lo menos 1 producto'
+            });
         }else{
             addToCart(products, valor)
-            Swal.fire(`${valor} Producto(s) añadido(s)`, {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: false,
-                progress: false,
-                });
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                background: '#E99E75',
+                color: 'black',  
+                showConfirmButton: false,
+                timer: 1500,
+                timerProgressBar: false,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer),
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            Toast.fire({
+                icon: 'success',
+                title: `${valor} producto(s) añadido(s)`
+            });
+            setValor(false)
         }
     }
-
-    const [valor] = useState(0)
 
     return (
         <div className='detallesProducto'>
@@ -45,7 +61,7 @@ const ItemDetail = ( {products } ) => {
                     <p className="card-text"> $ {products.price} </p>
                     <p> {products.description} </p>
                     {
-                        valor == 0 ? 
+                        valor ? 
                         <ItemCount stock={products.stock} onAdd={onAdd}/>
                         : 
                         <div>
