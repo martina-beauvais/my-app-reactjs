@@ -11,15 +11,23 @@ const ItemDetail = ( {products } ) => {
     const {addToCart} = useContext(CartContext)
     function onAdd(valor){
         if(valor < 1){
-            Swal.fire('Debes añadir al menos 1', {
-                position: "top-right",
-                autoClose: 1700,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: false,
-                progress: false,
-                });
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                background: '#E99E75',
+                color: 'black',  
+                showConfirmButton: false,
+                timer: 1500,
+                timerProgressBar: false,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer),
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            Toast.fire({
+                icon: 'error',
+                title: 'Debes añadir por lo menos 1 producto'
+            });
         }else{
             addToCart(products, valor)
             Swal.fire(`${valor} Producto(s) añadido(s)`, {
@@ -34,8 +42,6 @@ const ItemDetail = ( {products } ) => {
                 setValor(false)
         }
     }
-
-
     return (
         <div className='detallesProducto'>
             <h2>Detalles del producto</h2>
