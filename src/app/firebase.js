@@ -1,17 +1,16 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-import { getAuth, setPersistence, browserLocalPersistence } from 'firebase/auth';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
-    authDomain: process.env.REACT_APP_PROJECT_ID + '.firebaseapp.com',
-    projectId: process.env.REACT_APP_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_PROJECT_ID + ".appspot.com",
+    apiKey: "AIzaSyCAHVp23d_RJW5-WcJRHsDuSAj1Gi20brk",
+    authDomain: "fir-prueba-326b2.firebaseapp.com",
+    projectId: "fir-prueba-326b2",
+    storageBucket: "fir-prueba-326b2.appspot.com",
+    messagingSenderId: "729273118299",
+    appId: "1:729273118299:web:9ed15e5a6065e7afd7197e",
+    measurementId: "G-V9LX0TE6Q0"
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
-export const db = getFirestore();
-export const auth = getAuth(firebaseApp);
-
-// Si descomentas la siguiente línea, cuando mientras que el usuario no se desloguee expresamente o cierre el navegador, permanecerá logueado y podremos acceder a su id desde cualquier página
-setPersistence(auth, browserLocalPersistence);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app)

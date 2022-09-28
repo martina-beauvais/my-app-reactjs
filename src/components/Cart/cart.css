@@ -41,6 +41,12 @@ h1{
     margin-left: 91%;
     margin-bottom: -5%;
 }
+.btn-circle-moreProducts {
+    border: solid 1px #081832;
+    background-color: #B7C4CF;
+    margin-left: 82%;
+    margin-bottom: 1%;
+}
 /* --- CART EMPTY --- */
 .cartEmptyContainer{
     margin-top:10%;
@@ -65,7 +71,7 @@ h1{
 .btn-circle-cleanCart {
     border: solid 1px #081832;
     background-color: #B7C4CF;
-    margin-left: 85%;
+    margin-left: 83.5%;
 }
 .totalPrice{
     margin-top: 3%;

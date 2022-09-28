@@ -2,8 +2,8 @@ import React from 'react';
 import ItemList from './ItemList';
 import './itemListContainer.css'
 import { useState , useEffect} from 'react';
-import products from '../../products';
 import { useParams } from 'react-router-dom';
+import { getItems } from '../../app/firebase-api';
 
 
 const ItemListContainer = () => {
@@ -12,16 +12,19 @@ const ItemListContainer = () => {
     const {categoryId} = useParams()
 
     useEffect(() => {
-        const getProductos = () => new Promise ((res) => {
+        {/*const getProductos = () => new Promise ((res) => {
             setTimeout(() => { 
                 res(products)
             },1000)
-        })
+        })*/}
         if(categoryId){
-            getProductos().then(res => setProductos(res.filter((res) => res.category === categoryId)))
+            getItems()
+            .then(res => setProductos(res.filter((res) => res.category === categoryId)))
         }else{
-            getProductos().then(res => setProductos(res))
-        }  
+            getItems()
+            .then(res => setProductos(res))
+        }
+        
     },[categoryId])
 
     return (

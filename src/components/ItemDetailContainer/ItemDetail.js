@@ -6,7 +6,7 @@ import './itemDetail.css'
 import { CartContext } from '../context/CartContext';
 import Swal from 'sweetalert2';
 
-const ItemDetail = ( {products } ) => {
+const ItemDetail = ( { products } ) => {
     const [valor, setValor] = useState(true)
     const {addToCart} = useContext(CartContext)
     function onAdd(valor){
@@ -44,8 +44,7 @@ const ItemDetail = ( {products } ) => {
     }
     return (
         <div className='detallesProducto'>
-            <h2>Detalles del producto</h2>
-            <div className="card" style={{width: 18 + 'rem'}} id={products.id}>
+            <div className="card" style={{width: 18 + 'rem'}} key={products.id}>
                 <img className="card-img-top" src={products.img} alt="" />
                 <div className="card-body">
                     <h3 className="card-title"> {products.title} </h3>

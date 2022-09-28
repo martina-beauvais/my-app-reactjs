@@ -44,13 +44,6 @@ const NavBar = () => {
                                         </NavLink>
                                     </a>
                                 </li>
-                                <li className="nav-item">
-                                    <a className="nav-link " aria-current="page" >
-                                        <NavLink to="/category/serum">
-                                            Sérums
-                                        </NavLink>
-                                    </a>
-                                </li>
                             </ul>
                             <div>
                                 <div className="submit">
