@@ -4,7 +4,7 @@ import ItemListContainer from "../components/ItemListContainer/ItemListContainer
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 import CartWidget from "../components/Cart/CartWidget";
 import CartProvider from "../components/context/CartContext";
-
+import Home from '../pages/Home'
 const Router = () => {
     return(
     <>
@@ -12,7 +12,7 @@ const Router = () => {
             <BrowserRouter>
                 <Routes >
                     <Route element={<Layout />}>
-                        <Route path="/" index element={<ItemListContainer />}/>
+                        <Route path="/" index element={<Home />}/>
                         <Route path="/category/:categoryId" element={<ItemListContainer />} />
                         <Route path="/item/:itemId" element={<ItemDetailContainer />} />
                         <Route path="/cart/" element={<CartWidget/>} />

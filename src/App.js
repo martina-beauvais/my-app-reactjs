@@ -6,8 +6,6 @@ function App() {
   return (
     <div>
       <Router/>
-      {/*greeting={'Bievenido a Cornelia Street'} 
-      description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae vestibulum purus. Cras luctus lacus.'}*/}
     </div>
   );
 }

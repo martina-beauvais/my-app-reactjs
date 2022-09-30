@@ -1,3 +1,4 @@
+import { async } from "@firebase/util";
 import { collection, getDocs, query, doc, getDoc, addDoc, deleteDoc, updateDoc, setDoc, where } from "firebase/firestore";
 import { db } from './firebase';
 
@@ -27,6 +28,12 @@ export const getItemsByCondition = async (itemId) => {
     const colRef = collection(db, 'Velas');
     const result = await getDocs(query(colRef, where('', '==', itemId)));
     return getArrayFromCollection(result);
+}
+
+export const getCollection = async () => {
+    const colRef = collection (db, 'categories')
+    const result = await getDocs(query(colRef))
+    return getArrayFromCollection(result)
 }
 
 export const getItemById = async (itemId) => {

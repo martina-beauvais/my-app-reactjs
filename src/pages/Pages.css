@@ -1,0 +1,20 @@
+/* --- HOME --- */
+.banner{
+    height: 25%; 
+    width:100%;
+}
+.container-section {
+    background-color: rgba(241,222,151,0.7);
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%; }
+.gif{
+    height: 50px; 
+    width:50px;
+}
+/* --- FOOTER --- */ 
+.footer{
+    height: 500px;
+    width: 100%;
+}
