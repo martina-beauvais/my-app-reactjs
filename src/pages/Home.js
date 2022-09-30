@@ -1,5 +1,7 @@
 import React from 'react';
 import fotoBanner from '../assets/extras/banner.png'
+import fotoBanner2 from '../assets/extras/banner2.png'
+import fotoBanner3 from '../assets/extras/banner3.png'
 import gifInter from '../assets/extras/27-globe-flat.gif'
 import gifBox from '../assets/extras/box.gif'
 import gifSeller from '../assets/extras/bestSeller.gif'
@@ -19,10 +21,10 @@ const Home = () => {
                         <img src={fotoBanner} className="banner" alt="..."/>
                     </div>
                     <div className="carousel-item">
-                        <img src={fotoBanner} className="banner" alt="..."/>
+                        <img src={fotoBanner2} className="banner" alt="..."/>
                     </div>
                     <div className="carousel-item">
-                        <img src={fotoBanner} className="banner" alt="..."/>
+                        <img src={fotoBanner3} className="banner" alt="..."/>
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

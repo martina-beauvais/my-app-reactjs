@@ -1,7 +1,10 @@
 /* --- HOME --- */
 .banner{
     height: 25%; 
-    width:100%;
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right:20%;
 }
 .container-section {
     background-color: rgba(241,222,151,0.7);
@@ -12,6 +15,14 @@
 .gif{
     height: 50px; 
     width:50px;
+}
+.carouselExampleIndicators{
+    margin-top: 15%;
+    margin-left: 20%;
+    margin-right:20%;
+}
+.carousel-control-prev-icon{
+    color-scheme:black;
 }
 /* --- FOOTER --- */ 
 .footer{
