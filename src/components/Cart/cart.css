@@ -68,12 +68,22 @@ h1{
     background-color: #B7C4CF;
 }
 /* --- CART ITEM LIST --- */ 
-.btn-circle-cleanCart {
+.btn-circle-finishBuying {
     border: solid 1px #081832;
     background-color: #B7C4CF;
-    margin-left: 83.5%;
+    margin-right: 7%;
+    margin-left: -10%;
+}
+.btn-circle-cleanCart {
+    
+    margin-right: 10%;
+    margin-left: -50%;
 }
 .totalPrice{
     margin-top: 3%;
     margin-left: 85%;
+}
+.moreProducts{
+    display:flex;
+    flex-direction: row-reverse;
 }

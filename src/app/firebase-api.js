@@ -1,4 +1,3 @@
-import { async } from "@firebase/util";
 import { collection, getDocs, query, doc, getDoc, addDoc, deleteDoc, updateDoc, setDoc, where } from "firebase/firestore";
 import { db } from './firebase';
 
@@ -41,6 +40,8 @@ export const getItemById = async (itemId) => {
     const result = await getDoc(doc(colRef, itemId));
     return result.data();
 }
+
+
 
 // DELETE
 export const deleteItem = async (id) => {
