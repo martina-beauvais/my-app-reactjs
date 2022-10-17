@@ -6,7 +6,7 @@ Cornelia Street es un sitio de e-commerce ficticia diseñada para la venta inter
 
 Este e-commerce contará con cuatro páginas principales, por el momento. 
 
-La página principal será "Home" o "Inicio" dónde se verá los productos con los que cuenta el sitio, envíos sin costo y productos con la mejor calidad. La segunda y tercera página serán las categorías de los productos disponibles hasta el momento (velas y sérums). La última página (que será añadida próximamente) contará con un formulario para contactarse con la empresa ficticia en caso de algún inconveniente al navegar o comprar, permitiendoles comentar el problema mediante un apartado de mensaje. 
+La página principal será "Inicio" dónde se verá los productos con los que cuenta el sitio, envíos sin costo y productos con la mejor calidad. La segunda, tercera y cuarta página serán las categorías de los productos disponibles hasta el momento (velas, libros y boxes). La última página es el carrito, donde se verán los productos que va añadiendo el usuario. 
 
 ## Librerías utilizadas hasta el momento 
 
