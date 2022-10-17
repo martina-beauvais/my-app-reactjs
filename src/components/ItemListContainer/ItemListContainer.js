@@ -11,11 +11,6 @@ const ItemListContainer = () => {
     const {categoryId} = useParams()
 
     useEffect(() => {
-        {/*const getProductos = () => new Promise ((res) => {
-            setTimeout(() => { 
-                res(products)
-            },1000)
-        })*/}
         if(categoryId){
             getItems()
             .then(res => setProductos(res.filter((res) => res.category === categoryId)))
@@ -27,7 +22,7 @@ const ItemListContainer = () => {
     },[categoryId])
 
     return (
-        <>
+        <>  
             <ItemList productos={productos}/>
         </>
     )

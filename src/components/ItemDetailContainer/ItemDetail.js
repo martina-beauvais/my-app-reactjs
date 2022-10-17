@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import ItemCount from './itemCount/ItemCount';
 import { Link } from 'react-router-dom';
-import './itemDetail.css'
+import './itemDetail.css';
 import { CartContext } from '../context/CartContext';
 import Swal from 'sweetalert2';
 
@@ -13,7 +13,7 @@ const ItemDetail = ( { products } ) => {
             const Toast = Swal.mixin({
                 toast: true,
                 position: 'top-end',
-                background: '#E99E75',
+                background: '#FACE4D',
                 color: 'black',  
                 showConfirmButton: false,
                 timer: 1500,
@@ -42,13 +42,14 @@ const ItemDetail = ( { products } ) => {
         }
     }
     return (
-        <div className='detallesProducto'>
-            <div className="card" style={{width: 18 + 'rem'}} key={products.id}>
-                <img className="card-img-top" src={products.img} alt="" />
-                <div className="card-body">
+    <>
+        <div class="row row-cols-md-2 g-2" id='detallesProducto'>
+            <div class="card" style={{width: 20 + 'rem'}} key={products.id}>
+                <img src={products.img} class="card-img-top" alt="" /> 
+                <div class="card-body">
                     <h3 className="card-title"> {products.title} </h3>
+                    <h5> {products.author} </h5>
                     <p className="card-text"> $ {products.price} </p>
-                    <p> {products.description} </p>
                     {
                         valor ? 
                         <ItemCount stock={products.stock} onAdd={onAdd}/>
@@ -69,8 +70,14 @@ const ItemDetail = ( { products } ) => {
                     }
                 </div>
             </div>
+            <div className='card' style={{width: 20 + 'rem'}}>
+                <div class="card-body">
+                    <p className='reseña'> {products.description} </p>
+                    <p className='reseña'> {products.details} </p>
+                </div>
+            </div>
         </div>
-        
+        </>
     )
 }
 

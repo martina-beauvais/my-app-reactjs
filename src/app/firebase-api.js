@@ -3,7 +3,7 @@ import { db } from './firebase';
 
 // CREATE
 export const createItem = async(obj) => {
-    const colRef = collection(db, 'Velas');
+    const colRef = collection(db, 'orders');
     const data = await addDoc(colRef, obj);
     return data.id;
 }
@@ -29,9 +29,9 @@ export const getItemsByCondition = async (itemId) => {
     return getArrayFromCollection(result);
 }
 
-export const getCollection = async () => {
+export const getCollectionList = async () => {
     const colRef = collection (db, 'categories')
-    const result = await getDocs(query(colRef))
+    const result = await getDocs(query(colRef));
     return getArrayFromCollection(result)
 }
 

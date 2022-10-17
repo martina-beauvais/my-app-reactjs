@@ -18,7 +18,7 @@ const CartItemList = () => {
             </div>         
             { carrito.map(product => <CartItem key={product.id} product={product}/> )} 
             <div className='moreProducts'>
-                <Link to='/checkout/'>
+                <Link to='/checkout'>
                     <button className='btn btn-circle-cleanCart'> Finalizar compra </button>
                 </Link>
                 <button onClick={() => cleanCart()} className='btn btn-circle-finishBuying'> Eliminar productos </button>

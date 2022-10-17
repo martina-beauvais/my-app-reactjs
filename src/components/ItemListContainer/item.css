@@ -5,6 +5,8 @@
     font-size: 15px;
     margin-bottom: 5%;
     text-align: center;
+    background-color: #F4E8C2;
+    margin-bottom:10%;
 }
 .btn-circle {
     width: 30px;
@@ -14,10 +16,10 @@
     text-align: center;
     font-size: 12px;
     line-height: 1.42857;
-    border: solid 1px #081832;
-    background-color: #B7C4CF;
+    border: solid 1px #637454;
+    background-color: #7D8D72;
 }
 .btn-circle-two{
-    border: solid 1px #081832;
-    background-color: #B7C4CF;
+    border: solid 1px #637454;
+    background-color: #7D8D72;
 }

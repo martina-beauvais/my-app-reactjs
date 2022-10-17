@@ -1,6 +1,6 @@
 # CORNELIA STREET
 
-Cornelia Street es un sitio de e-commerce ficticia diseñada para la venta internacional de productos tales como velas arómaticas, sérums, entre otras cosas (próximamente). 
+Cornelia Street es un sitio de e-commerce ficticia diseñada para la venta internacional de productos tales como velas arómaticas, libros y boxes. 
 
 ## Enfoque del proyecto 
 
@@ -10,10 +10,14 @@ La página principal será "Home" o "Inicio" dónde se verá los productos con l
 
 ## Librerías utilizadas hasta el momento 
 
+### Bootstrap
+
 → Bootstrap, mediante un link en el HTML, para establecer diseños predeterminados como las cards, el navbar y, próximamente, el formulario y el footer. 
 
 → React-router-dom, mediante un npm, para crear rutas fijas y dinámicas, y mostrar un producto con su información correspondiente (tal como la descripción). Por medio de esta librería se utilizan los componentes: useState, useParams, Link, NavLink, Outlet,BrowserRouter, Routes, Route y useEffects. 
 
+→ SweerAlert2, mediante un npm, para añadir alertas, tales como: "Debes añadir por lo menos un producto", "Compra finalizada". 
+
 ## Proyecto 
 
-Este proyecto de e-commerce será desarrollado durante el curso de React JS de CoderHouse
+Este proyecto de e-commerce fue desarrollado durante el curso de React JS de CoderHouse

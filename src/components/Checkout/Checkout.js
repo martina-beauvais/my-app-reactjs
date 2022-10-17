@@ -1,65 +1,61 @@
 import React, {useState, useContext} from 'react';
 import {CartContext} from '../context/CartContext';
-import { collection, addDoc, getFirestore} from "firebase/firestore";
-import { db } from '../../app/firebase';
-import './Checkout.css'
+import { createItem } from '../../app/firebase-api';
+import './Checkout.css';
+import checkoutBanner from '../../assets/extras/checkout-banner.png';
+import Swal from 'sweetalert2';
 
 const Ckechout = () => {
     const {carrito, totalPrice} = useContext(CartContext)
-    const [ordenDeCompra, setOrdenDeCompra] = useState({
-        buyer: {
-            name: '',
-            phone: '', 
-            email: ''
-        },
-        products: carrito.map(product => ({id: product.id, title: product.title, category: product.category, price: product.price, quantify: product.quantify})),
-        total: totalPrice(),
-        date: new Date()
-    })
-    
-    const comprar = () => {
-        const db = getFirestore(); 
-        const orderCollection = collection(db, 'orders');
-        addDoc(orderCollection, ordenDeCompra)
-        .then(({id}) => console.log(id))
+    const [buyer, setBuyer] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+    });
+    const {name, email, phone, address} = buyer
+
+    const InputData = (e) =>{
+        const {name, value} = e.target
+        setBuyer({...buyer, [name] : value})
+    }
+    const guardarDatos = () =>{
+        const products = carrito.map((product) => { return ({id: product.id, title: product.title, category: product.category, price: product.price, quantify: product.quantify, author: product.author})});
+        const date = new Date();
+        const total = totalPrice();
+        const obj = {buyer,products,date,total};
+
+        createItem(obj).then(id=> {
+            Swal.fire(
+            `<h3> ¡Compra finalizada! </h3>  
+            <h5> El código de tu Orden es ${id} </h5>
+            <h5> Se ha enviado un mensaje de confirmación añ: ${buyer.email} </h5> 
+            <h4>¡Muchas Gracias!</h4>
+            `);
+        });
+        setBuyer({name: "",email: "",phone: "",address: "",})
     }
     
-    {/*const [user, setUser] = useState({
-        name: '',
-        phone: '',
-        email: ''
-    })
 
-    const handleOrder = async () => {
-        const date = new Date()
-        console.log(date)
-        await addDoc(collection(db, 'orders'), {user, carrito, date, totalPrice})
-    }*/}
-    
     return (
         <>
-        <h1> Finalizar compra </h1>
+        <img src={checkoutBanner} className='bannerProducts'/>
         <div className='Checkout'>
-            <form  className='Formulario' onSubmit={comprar}>
+            <form  className='Formulario' onSubmit={guardarDatos}>
+                
                 <div className='input'>
-                    <label>
-                        Nombre : 
-                    </label>
-                    <input type="text" value={ordenDeCompra.name} onChange={(e) => setOrdenDeCompra({...ordenDeCompra, name: e.target.value})}/>
+                    <input type="text" name='name' placeholder='Ingrese su nombre...' value={name} onChange={InputData} required/>
                 </div>
                 <div className='input'>
-                    <label>
-                        Telefono : 
-                    </label>
-                    <input type="number" value={ordenDeCompra.phone} onChange={(e) => setOrdenDeCompra({...ordenDeCompra, phone: e.target.value })}/>
+                    <input type="text" name='email' placeholder='Ingrese su email...' value={email} onChange={InputData} required/>
                 </div>
                 <div className='input'>
-                    <label>
-                        Email : 
-                    </label>
-                    <input type="text" value={ordenDeCompra.email} onChange={(e) => setOrdenDeCompra({...ordenDeCompra, email: e.target.value})} />
+                    <input type="number" name='phone' placeholder='Ingrese su telefono...' value={phone} onChange={InputData} required/>
                 </div>
-                <button className='btn btn-circle-sendProduct'>Mandar compra</button>
+                <div className='input'>
+                    <input type="text" name='address' placeholder='Ingrese su dirección...' value={address} onChange={InputData} required/>
+                </div>
+                <button className='btn btn-circle-sendProduct' type='submit' disabled={carrito.length > 0 ? null : true} >Mandar compra</button>
             </form>
         </div>
             

@@ -51,26 +51,19 @@ const NavBar = () => {
                                         </NavLink>
                                     </a>
                                 </li>
-                            </ul>
-                            <div>
-                                <div className="submit">
-                                    <a className="btn btn-outline-dark" >
-                                        <NavLink to="*">
-                                            Registrarse
-                                        </NavLink>
-                                    </a> 
-                                    <a className="btn btn-outline-dark" >
-                                        <NavLink to="*">
-                                            Iniciar Sesión
+                                <li className="nav-item">
+                                    <a className="nav-link " aria-current="page">
+                                        <NavLink to="/category/boxes">
+                                            Boxes
                                         </NavLink>
                                     </a>
-                                </div> 
-                            </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <ul>
                         <li className="nav-item">
-                            <a className="nav-link ">
+                            <a className="nav-link" >
                                 <NavLink to="/cart/">
                                     <CartIcon/>
                                 </NavLink>

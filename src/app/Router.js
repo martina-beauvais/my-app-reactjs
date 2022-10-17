@@ -17,9 +17,10 @@ const Router = () => {
                         <Route path="/" index element={<Home />}/>
                         <Route path="/category/:categoryId" element={<ItemListContainer />} />
                         <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+                        <Route paht="/productos/" element={<Home/>}/>
                         <Route path="/cart/" element={<CartWidget/>} />
-                        <Route path="/checkout/" element={<Checkout/>} />
-                        <Route path="*" element={<div>Error 404</div> }/> 
+                        <Route path="/checkout" element={<Checkout/>} />
+                        <Route path="*" element={<h1>Error 404</h1> }/> 
                     </Route>
                 </Routes>
             </BrowserRouter>

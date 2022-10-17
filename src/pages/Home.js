@@ -1,11 +1,13 @@
 import React from 'react';
-import fotoBanner from '../assets/extras/banner.png'
-import fotoBanner2 from '../assets/extras/banner2.png'
-import fotoBanner3 from '../assets/extras/banner3.png'
-import gifInter from '../assets/extras/27-globe-flat.gif'
-import gifBox from '../assets/extras/box.gif'
-import gifSeller from '../assets/extras/bestSeller.gif'
-import './Pages.css'
+import fotoBanner from '../assets/extras/banner.png';
+import productbanner from '../assets/extras/productos-banner.png';
+import fotoBanner2 from '../assets/extras/banner2.png';
+import fotoBanner3 from '../assets/extras/banner3.png';
+import gifInter from '../assets/extras/27-globe-flat.gif';
+import gifBox from '../assets/extras/box.gif';
+import gifSeller from '../assets/extras/bestSeller.gif';
+import './Pages.css';
+import ItemCollection from '../components/ItemCollection/ItemCollection';
 
 const Home = () => {
     return (
@@ -38,10 +40,10 @@ const Home = () => {
             </div>
             <div className="container-section">
                 <div className="container text-center">
-                    <div className="row align-items-center">
+                    <div className="row align-items-center-2">
                         <div className="col-4">
                             <div>
-                                <img src={gifSeller} className="gif"/>
+                                <img src={gifSeller} className="gifHome"/>
                             </div>
                             <h5>                        
                                 Productos con la mejor calidad
@@ -49,7 +51,7 @@ const Home = () => {
                         </div>
                         <div className="col-4">
                             <div>
-                                <img src={gifBox} className="gif"/>
+                                <img src={gifBox} className="gifHome"/>
                             </div>
                             <h5>
                                 Envíos sin costo
@@ -57,7 +59,7 @@ const Home = () => {
                         </div>
                         <div className="col-4">
                             <div>
-                                <img src={gifInter} className="gif"/>
+                                <img src={gifInter} className="gifHome"/>
                             </div>
                             <h5>
                                 Productos internacionales
@@ -66,6 +68,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <img src={productbanner} className='bannerProducts'/>
+            <ItemCollection/>
         </>
     )
 }

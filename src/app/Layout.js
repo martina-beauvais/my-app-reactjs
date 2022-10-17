@@ -5,15 +5,9 @@ import Footer from '../pages/Footer'
 const Layout = () => {
     return (
         <>
-            <div>
-                <NavBar/>
-            </div>
-            <div>
-                <Outlet/>
-            </div>
-            <div>
-                <Footer/>
-            </div>
+            <div> <NavBar/> </div>
+            <div> <Outlet/> </div>
+            <div> <Footer/> </div>
         </>
     )
 }
