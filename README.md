@@ -2,12 +2,10 @@
 
 Cornelia Street es un sitio de e-commerce ficticia diseñada para la venta internacional de productos tales como velas arómaticas, libros y boxes. 
 
-<<<<<<< HEAD
-=======
+
 ![gif-final](https://user-images.githubusercontent.com/104269045/196240452-b350f55b-6a20-4c84-be76-55b3fb0c8845.gif)
 
 
->>>>>>> 1055f6816d85830359d7012bdc6dd5a61594f0e9
 ## Enfoque del proyecto 
 
 Este e-commerce contará con cuatro páginas principales, por el momento. 
