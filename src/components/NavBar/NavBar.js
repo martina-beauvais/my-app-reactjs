@@ -1,6 +1,6 @@
 import fotoLogo from '../../assets/extras/logo.png';
 import fotoName from '../../assets/extras/cornelia-street.png';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './navbar.css'
 import CartIcon from '../Cart/CartIcon';
 
@@ -8,7 +8,9 @@ const NavBar = () => {
     return (
         <div className="shadow p-3 mb-5 bg-body rounded">
             <div className="encabezado">
+                <Link to='/'>
                     <img src={fotoName} alt="" className="name"/>            
+                </Link>
             </div>
             <nav className="navbar navbar-expand-lg navbar-light fixed-top ">
                 <div className="container-fluid">
@@ -40,14 +42,14 @@ const NavBar = () => {
                                 <li className="nav-item">
                                     <a className="nav-link " aria-current="page">
                                         <NavLink to="/category/candle">
-                                            Candles
+                                            Velas
                                         </NavLink>
                                     </a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link " aria-current="page">
                                         <NavLink to="/category/book">
-                                            Books
+                                            Libros
                                         </NavLink>
                                     </a>
                                 </li>

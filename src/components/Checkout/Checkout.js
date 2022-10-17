@@ -26,14 +26,14 @@ const Ckechout = () => {
         const obj = {buyer,products,date,total};
 
         createItem(obj).then(id=> {
-            Swal.fire(
-            `<h3> ¡Compra finalizada! </h3>  
-            <h5> El código de tu Orden es ${id} </h5>
-            <h5> Se ha enviado un mensaje de confirmación añ: ${buyer.email} </h5> 
-            <h4>¡Muchas Gracias!</h4>
-            `);
+            Swal.fire(`
+                <h2> ¡Compra finalizada! </h2>  
+                <h4> El número de tu compra es ${id} </h4>
+                <h5> Se ha enviado a tu mail: ${buyer.email} los detalles de la compra </h5> 
+                <h3>¡Muchas gracias por comprar en Cornelia Street!</h3>`
+            )
         });
-        setBuyer({name: "",email: "",phone: "",address: "",})
+        setBuyer({name: "",email: "",phone: "",address: ""})
     }
     
 

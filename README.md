@@ -2,6 +2,8 @@
 
 Cornelia Street es un sitio de e-commerce ficticia diseñada para la venta internacional de productos tales como velas arómaticas, libros y boxes. 
 
+![](../../../../../Users/Usuario/Desktop/Descargas/gif-final.gif)
+
 ## Enfoque del proyecto 
 
 Este e-commerce contará con cuatro páginas principales, por el momento. 
@@ -18,7 +20,7 @@ Mediante un link en el HTML, para establecer diseños predeterminados como las c
 
 Mediante un npm, para crear rutas fijas y dinámicas, y mostrar un producto con su información correspondiente (tal como la descripción). Por medio de esta librería se utilizan los componentes: useState, useParams, Link, NavLink, Outlet,BrowserRouter, Routes, Route y useEffects. 
 
-### SweerAlert2
+### SweetAlert2
 
 Mediante un npm, para añadir alertas, tales como: "Debes añadir por lo menos un producto", "Compra finalizada". 
 
