@@ -10,16 +10,37 @@ const Ckechout = () => {
     const [buyer, setBuyer] = useState({
         name: "",
         email: "",
+        emailConfirmation: "",
         phone: "",
         address: "",
     });
-    const {name, email, phone, address} = buyer
+    const {name, email, emailConfirmation, phone, address} = buyer
 
     const InputData = (e) =>{
         const {name, value} = e.target
         setBuyer({...buyer, [name] : value})
     }
-    const guardarDatos = () =>{
+    const guardarDatos = (e) =>{
+        e.preventDefault();
+        if(buyer.email !== buyer.emailConfirmation){
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                background: '#FACE4D',
+                color: 'black',  
+                showConfirmButton: false,
+                timer: 1500,
+                timerProgressBar: false,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer),
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+            Toast.fire({
+                icon: 'error',
+                title: 'El email debe coincidir'
+            });
+        } else {
         const products = carrito.map((product) => { return ({id: product.id, title: product.title, category: product.category, price: product.price, quantify: product.quantify, author: product.author})});
         const date = new Date();
         const total = totalPrice();
@@ -33,7 +54,7 @@ const Ckechout = () => {
                 <h3>¡Muchas gracias por comprar en Cornelia Street!</h3>`
             )
         });
-        setBuyer({name: "",email: "",phone: "",address: ""})
+        setBuyer({name: "",email: "",phone: "",address: ""})}
     }
     
 
@@ -48,6 +69,9 @@ const Ckechout = () => {
                 </div>
                 <div className='input'>
                     <input type="text" name='email' placeholder='Ingrese su email...' value={email} onChange={InputData} required/>
+                </div>
+                <div className='input'>
+                    <input type="text" name='emailConfirmation' placeholder='Confirmar email...' value={emailConfirmation} onChange={InputData} required/>
                 </div>
                 <div className='input'>
                     <input type="number" name='phone' placeholder='Ingrese su telefono...' value={phone} onChange={InputData} required/>
