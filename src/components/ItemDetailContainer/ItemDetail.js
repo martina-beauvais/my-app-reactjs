@@ -18,10 +18,6 @@ const ItemDetail = ( { products } ) => {
                 showConfirmButton: false,
                 timer: 1500,
                 timerProgressBar: false,
-                didOpen: (toast) => {
-                    toast.addEventListener('mouseenter', Swal.stopTimer),
-                    toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
             })
             Toast.fire({
                 icon: 'error',
